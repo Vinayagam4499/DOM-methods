@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nextSibling Example</title>
+    <style>
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <p>Paragraph 1</p>
+        <span>Span Element</span>
+        <p>Paragraph 2</p>
+        <p>Paragraph 3</p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const spanElement = document.querySelector('span');
+    
+    // Accessing next sibling of the span element
+    const nextSibling = spanElement.nextSibling;
+
+    // Checking if the next sibling is a paragraph element
+    if (nextSibling && nextSibling.nodeName === 'P') {
+        // Adding a class to the next sibling (if it's a paragraph)
+        nextSibling.classList.add('highlight');
+    }
+});
+
+    </script>
+</body>
+</html>
