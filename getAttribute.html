@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getAttribute</title>
+</head>
+<body>
+    <a href="https://www.javascript.net" target="_blank" id="js"> Javascript Tutorial</a>
+
+    <script>
+        let link = document.querySelector('#js');
+        if(link){
+            let target = link.getAttribute('target');
+            console.log(target);
+        }
+    </script>
+</body>
+</html>

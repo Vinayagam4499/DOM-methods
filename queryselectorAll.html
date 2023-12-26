@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Selector All</title>
+    <style>
+        body{
+            font-family: Fira Code;
+            font-size: 20px;
+            text-align: center;
+            /* color: red; */
+        }
+    </style>
+</head>
+<body>
+    <h1>Query Selector All</h1>
+    <h2>Method</h2>
+    <h2>Second Heading</h2>
+    <p id="scaer" class="bit">First Paragraph</p>
+    <a href="#" target="_blank"> Link</a>
+    <p class="bit">Second Paragraph</p>
+    <span id="scaler">We learn on scaler academy</span>
+    <input type="text" value="Scaler_topics">
+</body>
+
+
+
+<script>
+    let elementlist = document.querySelectorAll('.bit')
+    for(let i =0;i<elementlist.length;i++){
+        console.log(elementlist[i]);
+    }
+</script>
+</html>

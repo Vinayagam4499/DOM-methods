@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Element</title>
+</head>
+<body>
+
+    <div id="div1">
+        The text above has been created dynamically.
+    </div>
+    
+</body>
+
+<script>
+
+document.body.onload = addelement;
+
+function addelement(){
+    const newdiv = document.createElement("div")
+    const newcontent = document.createTextNode("I 😡 U");
+    newdiv.append(newcontent);
+
+    const currentdiv = document.getElementById("div1");
+    document.body.insertBefore(newdiv, currentdiv);
+}
+
+
+
+
+
+
+    // document.body.onload = addElement;
+
+    // function addElement(){
+    //     const newdiv = document.createElement("ti");
+    //     const newContent = document.createTextNode("Hi there and greetings")
+    //     newdiv.append(newContent);
+
+    //     const currentdiv = document.getElementById("div1");
+    //     document.body.insertBefore(newdiv,currentdiv);
+    // }
+</script>
+</html>

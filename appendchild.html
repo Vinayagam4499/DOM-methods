@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append Child</title>
+</head>
+<body>
+    <ul id="menu"></ul>
+
+    <script>
+        function createmenu(name){ // Accept 'name' as a parameter
+            let li = document.createElement('li');
+            li.textContent = name;
+            return li;
+        }
+
+        const menu = document.querySelector('#menu');
+        menu.appendChild(createmenu('Home'));
+        menu.appendChild(createmenu('Services'));
+        menu.appendChild(createmenu('About Us'));
+        
+    </script>
+</body>
+</html>

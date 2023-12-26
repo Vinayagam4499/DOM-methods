@@ -1,0 +1,17 @@
+<p>paragraph 1</p>
+<p>paragraph 2</p>
+<p>paragraph 3</p>
+
+<button id="changecolor">change paragraph color</button>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function(){
+        const paragraphs = document.getElementsByTagName('p');
+        for(let i =0;i<paragraphs.length; i++){
+            paragraphs[i].addEventListener('click', function(){
+                this.style.color = 'red';
+            })
+        }
+    })
+</script>

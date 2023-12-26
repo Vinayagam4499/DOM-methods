@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <style>
+        /* Basic CSS styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.task-manager {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+li.completed {
+    text-decoration: line-through;
+}
+
+    </style>
+</head>
+<body>
+    <div class="task-manager">
+        <h1>Task Manager</h1>
+        <input type="text" id="taskInput" placeholder="Enter a task...">
+        <button id="addTaskButton">Add Task</button>
+        <ul id="taskList"></ul>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const taskInput = document.getElementById('taskInput');
+    const addTaskButton = document.getElementById('addTaskButton');
+    const taskList = document.getElementById('taskList');
+
+    addTaskButton.addEventListener('click', function() {
+        const taskName = taskInput.value.trim();
+        if (taskName !== '') {
+            addTask(taskName);
+            taskInput.value = '';
+        }
+    });
+
+    function addTask(taskName) {
+        const li = document.createElement('li');
+        li.textContent = taskName;
+        li.addEventListener('click', function() {
+            li.classList.toggle('completed');
+        });
+        taskList.appendChild(li);
+    }
+});
+
+    </script>
+</body>
+</html>

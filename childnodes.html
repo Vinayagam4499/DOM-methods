@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child Nodes </title>
+</head>
+<body>
+    <div id="container">
+        <h2>Child Nodes</h2>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+        <p>This is some bog news.</p>
+    </div>
+
+    <script>
+        const container = document.getElementById('container');
+        const childnodes = container.childNodes;
+
+        console.log(childnodes);
+    </script>
+</body>
+</html>
